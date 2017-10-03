@@ -1,0 +1,32 @@
+{
+  "name": "beagleboom-freesound",
+  "version": "1.0.0",
+  "description": "FreeSound Module, which communicates with freesound.org and the POSIX MessageQueue for the Beagle Boom Audio Sampler Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://lasse.kathke%40student.fh-kiel.de@stash.iue.fh-kiel.de/scm/bb/freesound.git"
+  },
+  "keywords": [
+    "Beagle",
+    "Boom",
+    "Beagle",
+    "Bone",
+    "Audio",
+    "Sampler",
+    "FreeSound",
+    "Upload",
+    "Download"
+  ],
+  "author": "Torben Hartmann, Friedemann Stoffregen, Lasse Kathke",
+  "license": "ISC",
+  "dependencies": {
+    "querystring": "^0.2.0",
+    "request": "^2.82.0",
+    "request-progress": "^3.0.0",
+    "then-request": "^4.1.0"
+  }
+}

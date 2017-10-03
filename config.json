@@ -1,0 +1,11 @@
+{
+    "credentials" : {
+        "client" : {
+            "id" : "",
+            "secret" : ""
+        },
+        "auth" : {
+            "tokenHost" : "https://www.freesound.org/apiv2/oauth2/access_token/"
+        }
+    }
+}

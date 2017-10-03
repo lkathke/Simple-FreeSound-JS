@@ -1,0 +1,13 @@
+{
+    "oAuth": {
+        "auth_code": "<AUTH_CODE_WHICH_SETS_APPLICATION>",
+        "token": {
+            "access_token": "<ACCESS_TOKEN_WHICH_SETS_APPLICATION>",
+            "token_type": "Bearer",
+            "expires_in": 0,
+            "refresh_token": "",
+            "scope": "read write",
+            "expires_timestamp": 0
+        }
+    }
+}
