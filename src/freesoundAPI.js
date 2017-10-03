@@ -75,7 +75,7 @@ FreeSoundAPI.prototype.getAccessToken = function (auth_code, forceRefresh) {
  * @param  Object oAuthData
  */
 FreeSoundAPI.prototype.loadConfig = function (oAuthCredentials, oAuthData) {
-    if (oAuthCredentials.client === undefined || oAuthCredentials.client.id === undefined || oAuthCredentials.client.secret === undefined) {
+    if (oAuthCredentials === undefined || oAuthCredentials.client === undefined || oAuthCredentials.client.id === undefined || oAuthCredentials.client.secret === undefined) {
         console.err("oAuthCredentials are not set!");
         throw new ArgumentException("oAuthCredentials are not set!");
     } else {
@@ -83,7 +83,7 @@ FreeSoundAPI.prototype.loadConfig = function (oAuthCredentials, oAuthData) {
         store.oAuth = oAuthData;
     }
 
-    if (store.oAuth === undefined || store.oAuth.token === undefined || store.oAuth.token.expires_timestamp === undefined || store.oAuth.token.expires_timestamp < (new Date()).getDate()) {
+    if (store.oAuth === undefined || store.oAuth.token === undefined || store.oAuth.token.expires_timestamp === undefined || store.oAuth.token.expires_timestamp < (new Date()).getTime()) {
         if (store.oAuth.auth_code !== undefined && store.oAuth.auth_code.trim() != "") {
             // Getting Access Token:
             this.getAccessToken(store.auth_code);
@@ -133,6 +133,7 @@ FreeSoundAPI.prototype.textSearch = function (text, startPage) {
         }
 
         that.emit("search-error", err);
+        console.log(err);
     });
 };
 
